@@ -9,15 +9,28 @@ import java.io.*;
 class Function {  
   String LongestWord(String sen) { 
   
-    // code goes here   
+       String [] arr = sen.split(" ");
+   
+       Arrays.sort(arr);
+    
+       String longest = "";
+    
+       for(int i = 0; i < arr.length; i++){
+  
+	      longest = arr[0];
+    
+	}
+    
+	sen = longest;
+	return sen;  
        
     return sen;
     
   } 
   
   public static void main (String[] args) {  
-    // the function call should go here    
-   
+    // the function call should go here   
+	System.out.println(LongestWord("Hey there Hellooooooooooo from Kenya")); 
   }   
   
 }
