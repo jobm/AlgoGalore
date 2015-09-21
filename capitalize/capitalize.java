@@ -3,6 +3,9 @@ public class MainClass{
     public static void GetUserInput(String input){
 
     }
+    public static string Capitalize(String input){
+
+    }
     public static void main(String [] args){
 
     }
