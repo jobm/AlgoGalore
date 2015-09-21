@@ -15,3 +15,19 @@
 // Example:
 // ThreeSort.threeSort(9,4,6); // [4,6,9]
 // ThreeSort.threeSort(3,2,1); // [1,2,3]
+
+import java.util.Arrays;
+class Main {
+    public static int[] TreeSort(int a,int b,int c){
+        int [] arr = new int [] {a,b,c};
+        Arrays.sort(arr);
+        return arr;
+    }
+  public static void main(String[] args) {
+      
+      for(int i = 0; i < Main.TreeSort(5,2,4).length; i++){
+          System.out.println(Main.TreeSort(5,2,4)[i]);
+      }
+      
+  }
+}
