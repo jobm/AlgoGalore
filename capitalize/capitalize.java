@@ -4,7 +4,10 @@ public class Main{
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a string of words");
         String s = input.nextLine();
-        System.out.println(Capitalize(s.toLowerCase()));
+        if(s == null || s.length() ==0){
+            return;
+        }
+        System.out.println(Capitalize(s.trim().toLowerCase()));
     }
     public static String Capitalize(String input){
         String [] caps = input.split(" ");
