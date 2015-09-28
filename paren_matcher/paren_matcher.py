@@ -5,3 +5,8 @@
 # Not balanced:
 #   '((()'
 #   '())('
+def balanced(parens):
+    if parens.count("(") == parens.count(")"):
+        return "balanced"
+    return "Not balanced"
+print(balanced("(())"))
