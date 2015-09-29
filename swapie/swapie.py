@@ -4,3 +4,14 @@
 #Let numbers and symbols stay the way they are.
 
 #NB do not use the swapcase python method.
+def SwapCase(string):
+    rev_case = []
+    for i in string:
+        if i.isupper():
+            rev_case.append(i.lower())
+        elif i.islower():
+            rev_case.append(i.upper())
+        else:
+            rev_case.append(i)
+    print ''.join(rev_case)
+print(SwapCase("Hello World"))
