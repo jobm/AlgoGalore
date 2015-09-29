@@ -4,6 +4,7 @@
 #Let numbers and symbols stay the way they are.
 
 #NB do not use the swapcase python method.
+<<<<<<< HEAD
 def SwapCase(string):
     rev_case = []
     for i in string:
@@ -15,3 +16,6 @@ def SwapCase(string):
             rev_case.append(i)
     print ''.join(rev_case)
 print(SwapCase("Hello World"))
+=======
+
+>>>>>>> 151c9180852fb608c42686954fa33ca2d992fc56
