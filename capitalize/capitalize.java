@@ -28,6 +28,6 @@ public class Main{
 =======
 // Using java, have the function capitalize(str) take the str parameter being passed and capitalize
 // the first letter of each word. Words will be separated by only one space.
-// the scanner object should be in the main method, from where we are going to call our function for testing
+// use the main method for testing and call the function from the main method
 // it should take string input from a user
 >>>>>>> 7cccf75f5eeb839e84d646aac854e19e5f5c68c8
