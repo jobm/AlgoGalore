@@ -6,9 +6,10 @@
 def Secondy(lis):
     lis.sort()
     list_wanted = []
-    list_wanted.append(lis[len(lis)-1])
     list_wanted.append(lis[len(lis)-2])
+    list_wanted.append(lis[len(lis)-3])
+    list_wanted.sort()
     return list_wanted
 
 # keep this function call below here
-print Secondy([100,20,4,1,11500])
+print Secondy([7, 7, 12, 98, 106])
