@@ -4,7 +4,11 @@
 # The list will not be empty and will contain at least 2 numbers. It can get tricky if there's just two numbers!
 
 def Secondy(lis):
-  # code goes here
-
+    lis.sort()
+    list_wanted = []
+    list_wanted.append(lis[len(lis)-1])
+    list_wanted.append(lis[len(lis)-2])
+    return list_wanted
 
 # keep this function call below here
+print Secondy([100,20,4,1,11500])
