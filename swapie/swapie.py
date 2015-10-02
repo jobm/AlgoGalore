@@ -4,7 +4,6 @@
 #Let numbers and symbols stay the way they are.
 
 #NB do not use the swapcase python method.
-<<<<<<< HEAD
 def SwapCase(string):
     rev_case = []
     for i in string:
@@ -15,7 +14,10 @@ def SwapCase(string):
         else:
             rev_case.append(i)
     print ''.join(rev_case)
-print(SwapCase("Hello World"))
-=======
+def swapCase(string):
+    #the join method is iterable
+    return ''.join([char.upper() if char.islower() else char.lowwer() for char in string])
 
->>>>>>> 151c9180852fb608c42686954fa33ca2d992fc56
+print(SwapCase("Hello World"))
+print(swapCase("Beer Is So Sweeet"))
+
