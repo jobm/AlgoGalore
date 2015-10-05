@@ -5,5 +5,7 @@
 
 def Secondy(lis):
     lis.sort()    
-    return lis[len(lis)-3], lis[len(lis)-2]
+    if lis[0] == lis[1]:
+        return lis[2],lis[len(lis)-2]
+    return lis[1], lis[len(lis)-2]
 print Secondy([7, 7, 12, 98, 106])
