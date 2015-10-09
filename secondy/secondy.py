@@ -4,8 +4,6 @@
 # The list will not be empty and will contain at least 2 numbers. It can get tricky if there's just two numbers!
 
 def Secondy(lis):
-    lis.sort()    
-    if lis[0] == lis[1]:
-        return lis[2],lis[len(lis)-2]
-    return lis[1], lis[len(lis)-2]
+    lis = sorted(set(lis))  
+    return lis[1], lis[-2]
 print Secondy([7, 7, 12, 98, 106])

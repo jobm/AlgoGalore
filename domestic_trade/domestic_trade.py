@@ -28,8 +28,43 @@
 
 # If we enter 'DM1182', you program should return:
 # {:total_KSH=> 13290, :largest=> 'Nairobi'}.
-
-def domestic_trade(itemId):
-  # Your Code Here!
-
-domestic_trade("DM1724")
+import csv
+def read_csv(item_id):
+    #global variables and data structures
+    line = ""
+    splited = []
+    output_dict = {}
+    list_of_cities = []
+    largest = ""
+    total = 0
+    final_dict = {}
+    #read the csv file
+    with open('TRANS.csv', 'rb') as csvfile:    
+        city_cash_reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+        for row in city_cash_reader:
+            line = ', '.join(row)
+            #check if the requested id exists in the line
+            if line.find(item_id) != -1:
+                #append to an empty list
+                splited.append(line.split(','))
+    #iterate the list that containes the line as an array           
+    for item in splited:
+        #fill the city dictionary with city and price values
+        dict_of_cities = {'city': item[0], 'price': int(item[2])}
+        #appened the dictionary to a list
+        list_of_cities.append(dict_of_cities)
+    #iterate the dictionary of cities
+    for the_city in list_of_cities:
+        #check if the output dictionary is still empty if so fill it with the city and price;
+        if the_city['city'] not in output_dict:
+            output_dict[the_city['city']] =  the_city['price']
+        #then sum the values of simillar keys
+        else:
+             output_dict[the_city['city']] +=  the_city['price']
+        #find the key that has the largest value
+        largest = max(output_dict.iterkeys(), key = lambda k: output_dict[k])
+        total = output_dict[largest]
+        
+    final_dict = {':total_KSH =>':total,':largest => ':largest}
+    return final_dict
+print(read_csv("DM1182"))
