@@ -4,3 +4,28 @@
 // your output should be world because "before" is 6 letters long, and "hello" and "world" are both 5, but the output should be world because it appeared as the last 5 letter word in the array. If strArr was ["hello", "world", "after", "all"] the output should be after because the first three words are all 5 letters long, so return the last one. The array will have at least three strings and each string will only contain letters.
 
 // use the main method only for calling the function where your logic lies. :-)
+
+import java.util.Arrays; 
+import java.util.Comparator; 
+
+class Main {
+    public class StringLengthComparator implements Comparator<String> { 
+        public int compare(String string1, String string2) { 
+            return Integer.compare(string2.length(), string1.length()); 
+        } 
+    } 
+    
+    public String FindThirdLongest(String [] arr){
+        
+        Arrays.sort(arr, new StringLengthComparator());
+        
+        return arr[2];
+    }
+    
+      public static void main(String[] args) {
+        Main m =  new Main();
+        
+        System.out.println(m.FindThirdLongest(new String [] {"hello", "world", "before", "all"}));
+      
+  }
+}
