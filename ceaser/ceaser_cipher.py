@@ -22,14 +22,14 @@ def cipher(sentence,step):
     alphabets = string.ascii_lowercase
     alphabets_tuples = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')
     alpha_cipher = ''
-    spaces = [pos for pos, char in enumerate(sentence) if char == ' ']
+    spaces_index = [pos for pos, char in enumerate(sentence) if char == ' ']
     for char in sentence.lower(): 
         if char in alphabets:
             alpha_cipher = alphabets.index(char) + step
             if alphabets.index(char) + step >= 25:
                 alpha_cipher = alpha_cipher % 25
         cipher.append(alphabets_tuples[alpha_cipher])
-    for i in spaces:
+    for i in spaces_index:
         cipher[i] = ' '
     return capitalizer(''.join(cipher))
 
