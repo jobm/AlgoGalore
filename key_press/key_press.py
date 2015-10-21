@@ -39,5 +39,18 @@
 # Bonus: Try to avoid hard-coding the number of button presses for each letter!
 
 
-def presses(str):
-  # Your Code Here!
+def presses(string): 
+    keys = []
+    number_of_presses = { 
+       1: ['A','D','G','J','M','P','T','W','1','*','#',' '],
+       2: ['B','E','H','K','N','Q','U','X','0'],
+       3: ['F','I','L','O','R','C','V','Y'],
+       4: ['2','3','4','5','6','7','8','9','Z']
+       } 
+    x = list(string)
+    for key,value in number_of_presses.items():
+        for char in x:
+            if char.upper() in value:
+                keys.append(key)
+    return sum(keys)
+print(presses("How R u 2day"))
