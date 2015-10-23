@@ -4,7 +4,7 @@
 // For example: 20 and 10 both are divisible by 1, 2, 5 and 10 so the output should be 10.
 // The range for both parameters will be from 1 to 10^3.
 class Main {
-  public static int beer(int a,int b){      
+  public static int gcf(int a,int b){      
       int small = 0, big = 0, gcd = 0;
       if(a > b){
          big = a; small = b;
@@ -23,6 +23,6 @@ class Main {
       return gcd;
   }
   public static void main(String[] args) {
-    System.out.println(beer(8,12));
+    System.out.println(gcf(8,12));
   }
 }
