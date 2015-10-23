@@ -3,7 +3,7 @@
 import java.util.Arrays;
 class Main {
     public static int [] Arr(int [] arr){
-        int [] arr_min_max = new int []{};
+        int [] arr_min_max;
         Arrays.sort(arr);
         arr_min_max = new int [] {arr[arr.length -1], arr[0]};
         return arr_min_max;
